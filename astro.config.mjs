@@ -6,8 +6,6 @@ import expressiveCode from 'astro-expressive-code';
 import icon from 'astro-icon';
 import { defineConfig } from 'astro/config';
 import { expressiveCodeOptions } from './src/site.config';
-import { remarkReadingTime } from './src/utils/remarkReadingTime.ts';
-import vercel from '@astrojs/vercel/serverless';
 
 const options = {
   // Specify the theme to use or a custom theme json, in our case
@@ -33,17 +31,18 @@ const options = {
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-resume-01.vercel.app',
+  site: 'https://full-stack-developer.net',
+
   integrations: [expressiveCode(expressiveCodeOptions), tailwind({
     applyBaseStyles: false
   }), sitemap(), mdx(), icon(), alpinejs()],
   markdown: {
     // Disable syntax built-in syntax hightlighting from astro
-    remarkPlugins: [remarkReadingTime]
+    // remarkPlugins: [remarkReadingTime]
   },
   prefetch: true,
-  output: 'server',
-  adapter: vercel({
-    webAnalytics: { enabled: true }
-  }),
+  output: 'static',
+  // adapter: vercel({
+  //   webAnalytics: { enabled: true }
+  // }),
 });
