@@ -8,8 +8,8 @@ const { class: className } = Astro.props;
 <header class={cn(className, 'lg:max-w-7xl w-full md:fixed z-20 md:px-5')}>
 	<nav class="grid grid-cols-1 md:grid-cols-3" aria-label="global" x-data="{ open: false }">
 		<div class="col-span-1 flex flex-row items-start justify-between">
-			<a class="flex-none text-2xl font-semibold uppercase" href="/" aria-label="astroresume01"
-				>astro<span class="text-accent-300">resume</span>01</a
+			<a class="flex-none text-2xl font-semibold uppercase" href="/" aria-label="john-day-resume"
+				>John Day</a
 			>
 
 			<div>
@@ -103,12 +103,6 @@ const { class: className } = Astro.props;
 				aria-label="Tools"
 				>Tools
 			</a>
-			<a
-				href="/blog"
-				class="hover:text-accent-300 flex-none text-[1.05rem] font-medium"
-				aria-label="Blog"
-				>Blog
-			</a>
 		</nav>
 		<div
 			class="bg-background-tertiary z-10 col-span-2 mb-5 hidden flex-row justify-between rounded-2xl border border-transparent p-5 text-secondary-foreground shadow-xl dark:shadow-black/50 md:flex"
@@ -148,12 +142,6 @@ const { class: className } = Astro.props;
 				class="hover:text-accent-300 flex-none text-[1.05rem] font-medium"
 				aria-label="Tools"
 				>Tools
-			</a>
-			<a
-				href="/blog"
-				class="hover:text-accent-300 flex-none text-[1.05rem] font-medium"
-				aria-label="Blog"
-				>Blog
 			</a>
 		</div>
 	</nav>
