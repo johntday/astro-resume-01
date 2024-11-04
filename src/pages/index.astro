@@ -1,32 +1,27 @@
 ---
-import Sidebar from '@/components/Sidebar.astro';
-import About from '@/components/cv/About.astro';
-import Certification from '@/components/cv/Certification.astro';
-import Education from '@/components/cv/Education.astro';
-import Experience from '@/components/cv/Experience.astro';
-import Project from '@/components/cv/Project.astro';
-import Skill from '@/components/cv/Skill.astro';
-import Tool from '@/components/cv/Tool.astro';
-import Base from '../layouts/Base.astro';
-
+import Sidebar from '@/components/Sidebar.astro'
+import About from '@/components/cv/About.astro'
+import Education from '@/components/cv/Education.astro'
+import WorkExperience from '@/components/cv/WorkExperience.astro'
+import Skill from '@/components/cv/Skill.astro'
+import Base from '../layouts/Base.astro'
+import ProjectExperience from '@/components/cv/ProjectExperience.astro'
 ---
 
 <Base meta={{ title: 'Home' }}>
-	<div class="grid grid-cols-1 gap-5 md:grid-cols-3">
-		<Sidebar />
-		<div class="md:col-span-2 md:mr-5">
-			<div
-				class="bg-background-tertiary mt-5 rounded-2xl border border-transparent p-5 md:mt-[5.5rem]"
-			>
-				<About />
-				<Experience />
-				<Education />
-				<Project />
-				<Certification />
-				<Skill />
-				<Tool />
-
-			</div>
-		</div>
-	</div>
+  <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+    <Sidebar />
+    <div class="md:col-span-2 md:mr-5">
+      <div class="mt-5 rounded-2xl border border-transparent bg-background-tertiary p-5 md:mt-[5.5rem]">
+        <About />
+        <WorkExperience />
+        <ProjectExperience />
+        <Education />
+        <!--<Project />-->
+        <!--<Certification />-->
+        <Skill />
+        <!--<Tool />-->
+      </div>
+    </div>
+  </div>
 </Base>
